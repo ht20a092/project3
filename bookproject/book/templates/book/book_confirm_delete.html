@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}書籍排除{% endblock %}
+
+{% block content %}
+    <form method='POST'>{% csrf_token %}
+        <button type="sybmit">{{ object.title }}を削除する</button>
+    </form>
+{% endblock %}
