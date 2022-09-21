@@ -27,3 +27,7 @@ class UpdateBookView(UpdateView):
     fields = (['title','text','category'])
     template_name = 'book/book_update.html'
     success_url = reverse_lazy('list-book')
+
+def index_view(request):
+    print('index_view is called')
+    return render(request, 'book/index.html',{'somedata':100})
